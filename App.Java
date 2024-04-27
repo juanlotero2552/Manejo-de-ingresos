@@ -51,7 +51,7 @@ public class App extends JPanel implements ActionListener {
     private JTextField ci;
 
     public App() {
-        //construct components
+        
         nombre = new JTextField (5);
         jcomp2 = new JLabel ("Nombre:");
         jcomp3 = new JLabel ("Salario:");
@@ -106,11 +106,11 @@ public class App extends JPanel implements ActionListener {
         vg1 = new JTextField (5);
         ci = new JTextField (5);
 
-        //adjust size and set layout
+   
         setPreferredSize (new Dimension (884, 512));
         setLayout (null);
 
-        //add components
+        
         add (nombre);
         add (jcomp2);
         add (jcomp3);
@@ -158,7 +158,7 @@ public class App extends JPanel implements ActionListener {
         add (vg1);
         add (ci);
 
-        //set component bounds (only needed by Absolute Positioning)
+        (only needed by Absolute Positioning)
         nombre.setBounds (125, 25, 100, 25);
         jcomp2.setBounds (10, 25, 100, 25);
         jcomp3.setBounds (10, 60, 100, 25);
@@ -236,16 +236,13 @@ public class App extends JPanel implements ActionListener {
             int cdeudas = Integer.parseInt(deudas.getText());
         }
 
-        // Aquí deberías agregar la lógica para actualizar las áreas de texto
-        // o cualquier otro componente que necesites después de presionar los botones "Ok".
-        // Por ejemplo:
+        
         actualizarInformacion();
     }
 
-    // Método para actualizar la información en las áreas de texto u otros componentes
+    
     private void actualizarInformacion() {
-        // Aquí puedes agregar la lógica para actualizar la información en los componentes.
-        // Por ejemplo:
+        
         dg.setText("Texto");
         im.setText("Texto");
         pam.setText("Texto");
