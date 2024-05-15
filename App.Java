@@ -105,11 +105,11 @@ public class App extends JPanel implements ActionListener {
         jcomp44 = new JTextArea (5, 5);
         Total = new JLabel ("Total:");
 
-        //adjust size and set layout
+       
         setPreferredSize (new Dimension (907, 549));
         setLayout (null);
 
-        //add components
+       
         add (Nombre);
         add (jcomp2);
         add (jcomp3);
@@ -156,7 +156,7 @@ public class App extends JPanel implements ActionListener {
         add (jcomp44);
         add (Total);
 
-        //set component bounds (only needed by Absolute Positioning)
+        
         Nombre.setBounds (125, 25, 100, 25);
         jcomp2.setBounds (10, 25, 100, 25);
         jcomp3.setBounds (10, 60, 100, 25);
