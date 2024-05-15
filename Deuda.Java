@@ -1,15 +1,18 @@
-import java.util.Scanner;
+public class Deuda {
 
 
-class Deuda {
-    
-        System.out.println("Ingrese la cantidad de la deuda:");
-        double montoDeuda = scanner.nextDouble();
+    public static  String calcularPagoDeuda(int montoDeuda, Usuario usuario) {
+        double salarioMensual = usuario.getSalario();
+        double porcentajeAhorro = 0.3; //30%
+        double pagoMensual = salarioMensual * porcentajeAhorro;
 
-        System.out.println("Ingrese el número de meses para pagar la deuda:");
-        int meses = scanner.nextInt();
+        if (pagoMensual <= 0) {
+            return "El salario debe ser mayor a cero para calcular el plan de pago.";
+        }
 
-        double pagoMensual = montoDeuda / meses;
-        System.out.println("Deberías pagar aproximadamente: " + pagoMensual + " por mes para pagar la deuda en " + meses + " mese");
+        
+        int meses = (int) Math.ceil(montoDeuda / pagoMensual);//Meses 
+
+        return "Para pagar \nla deuda de " + montoDeuda + " utilizando\n el 30% de tu salario mensual\n " + pagoMensual + ", necesitarás\n aproximadamente " + meses + " mes(es).";
     }
 }
